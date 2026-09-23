@@ -1,4 +1,4 @@
 jdk:
   - openjdk11
 install:
-  - mvn install:install-file -Dfile=aar/logger-2.2.2-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=logger -Dversion=2.2.2 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file -Dfile=aar/main-2.2.3-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=main -Dversion=2.2.3 -Dpackaging=aar -DgeneratePom=true
