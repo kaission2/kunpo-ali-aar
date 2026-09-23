@@ -3,6 +3,6 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kaission2.kunpo-ali-aar</groupId>
     <artifactId>kunpo-ali-aar</artifactId>
-    <version>2.2.2</version>
+    <version>2.2.3</version>
     <packaging>pom</packaging>
 </project>
