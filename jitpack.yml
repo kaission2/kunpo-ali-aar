@@ -2,6 +2,6 @@ jdk:
   - openjdk11
 install:
   - mvn install:install-file -Dfile=aar/auth_number_product-2.14.24-log-online-standard-cuum-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=auth_number_product -Dversion=2.14.24 -Dpackaging=aar -DgeneratePom=true
-  - mvn install:install-file -Dfile=aar/logger-2.2.2-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=logger -Dversion=2.14.24 -Dpackaging=aar -DgeneratePom=true
-  - mvn install:install-file -Dfile=aar/main-2.2.3-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=main -Dversion=2.14.24 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file -Dfile=aar/logger-2.2.2-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=logger -Dversion=2.2.2 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file -Dfile=aar/main-2.2.3-release.aar -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=main -Dversion=2.2.3 -Dpackaging=aar -DgeneratePom=true
   - mvn install:install-file -Dfile=kunpo-ali-bundle.pom -DgroupId=com.github.kaission2.kunpo-ali-aar -DartifactId=kunpo_ali_auth_number -Dversion=2.14.24 -Dpackaging=pom
