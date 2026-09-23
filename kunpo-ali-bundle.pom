@@ -5,23 +5,28 @@
   <artifactId>kunpo_ali_auth_number</artifactId>
   <version>2.14.24</version>
   <packaging>pom</packaging>
+  <properties>
+    <auth.number.product.v>2.14.24</auth.number.product.v>
+    <logger.v>2.2.2</logger.v>
+    <main.v>2.2.3</main.v>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.github.kaission2.kunpo-ali-aar</groupId>
       <artifactId>auth_number_product</artifactId>
-      <version>2.14.24</version>
+      <version>${auth.number.product.v}</version>
       <type>aar</type>
     </dependency>
     <dependency>
       <groupId>com.github.kaission2.kunpo-ali-aar</groupId>
       <artifactId>logger</artifactId>
-      <version>2.2.2</version>
+      <version>${logger.v}</version>
       <type>aar</type>
     </dependency>
     <dependency>
       <groupId>com.github.kaission2.kunpo-ali-aar</groupId>
       <artifactId>main</artifactId>
-      <version>2.2.3</version>
+      <version>${main.v}</version>
       <type>aar</type>
     </dependency>
   </dependencies>
