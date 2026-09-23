@@ -40,7 +40,7 @@ api 'com.github.kaission2.kunpo-ali-aar:kunpo_ali_auth_number:2.14.24'
 
 ## 三、升级步骤（一键脚本）
 
-升级脚本位于 KunpoSDK 工程的 `build/upgrade_kunpo_ali.py`。
+升级脚本位于本仓库根目录 `upgrade_kunpo_ali.py`。
 
 ### 第 1 步：放置三个新 aar
 
@@ -49,7 +49,7 @@ api 'com.github.kaission2.kunpo-ali-aar:kunpo_ali_auth_number:2.14.24'
 ### 第 2 步：执行升级脚本
 
 ```bash
-python3 build/upgrade_kunpo_ali.py \
+python3 upgrade_kunpo_ali.py \
     --pat <github_pat> \
     --jitpack-token <jitpack_authToken> \
     --auth <auth_aar路径> \
@@ -109,7 +109,7 @@ GitHub → Settings → Developer settings → Fine-grained tokens → Generate 
 ### 步骤 2：执行升级命令
 
 ```bash
-python3 build/upgrade_kunpo_ali.py \
+python3 upgrade_kunpo_ali.py \
     --pat <GHPAT> \
     --jitpack-token <JITPACK_TOKEN> \
     --auth /tmp/new-aar/auth_number_product-2.14.25-log-online-standard-cuum-release.aar \
@@ -215,4 +215,4 @@ GitHub 设置里 Revoke 掉 `<GHPAT>`。
 
 - GitHub PAT 用一次撤销一次，不要长期保留或写进任何提交；
 - JitPack authToken 具有删构建权限，不要泄露；
-- 升级脚本 `build/upgrade_kunpo_ali.py` 本身不含任何令牌，令牌只通过命令行参数传入。
+- 升级脚本 `upgrade_kunpo_ali.py` 本身不含任何令牌，令牌只通过命令行参数传入。
