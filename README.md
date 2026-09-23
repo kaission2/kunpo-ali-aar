@@ -33,7 +33,7 @@ api 'com.github.kaission2.kunpo-ali-aar:kunpo_ali_auth_number:2.14.24'
    - Repository permissions：**Administration**（读写）、**Contents**（读写）
 2. **JitPack authToken**（长期有效，妥善保管）：
    - 登录 https://jitpack.io → 打开 https://jitpack.io/w/user → 页面上 `jp_...` 开头的 **authToken**
-3. **三个新 aar 文件**，放在本地任意目录，**文件名必须含版本号**（脚本靠文件名提取版本）：
+3. **三个新 aar 文件**，放进本仓库 `aar/` 目录（旧版本文件保留，**文件名必须含版本号**（脚本靠文件名提取版本））：
    - `xxx-X.Y.Z-xxx.aar` 格式，例如 `logger-2.2.3-release.aar`
 
 ---
@@ -44,7 +44,7 @@ api 'com.github.kaission2.kunpo-ali-aar:kunpo_ali_auth_number:2.14.24'
 
 ### 第 1 步：放置三个新 aar
 
-把三个新 aar 放到本地目录（如 `KunpoSDK/libs/`），确认文件名含版本号。
+把三个新 aar 放进本仓库 `aar/` 目录（旧版本文件保留不删），确认文件名含版本号。
 
 ### 第 2 步：执行升级脚本
 
@@ -52,9 +52,9 @@ api 'com.github.kaission2.kunpo-ali-aar:kunpo_ali_auth_number:2.14.24'
 python3 upgrade_kunpo_ali.py \
     --pat <github_pat> \
     --jitpack-token <jitpack_authToken> \
-    --auth <auth_aar路径> \
-    --logger <logger_aar路径> \
-    --main <main_aar路径>
+    --auth aar/<auth_aar文件名> \
+    --logger aar/<logger_aar文件名> \
+    --main aar/<main_aar文件名>
 ```
 
 ### 第 3 步：脚本自动完成（无需人工干预）
@@ -91,12 +91,12 @@ api 'com.github.kaission2.kunpo-ali-aar:kunpo_ali_auth_number:<新auth版本>'
 
 ## 四、实操举例：升级到 2.14.25 / 2.2.3 / 2.2.4
 
-假设拿到三个新文件并放在 `/tmp/new-aar/`：
+把三个新文件放进本仓库 `aar/` 目录（与旧版本文件共存）：
 
 ```
-/tmp/new-aar/auth_number_product-2.14.25-log-online-standard-cuum-release.aar
-/tmp/new-aar/logger-2.2.3-release.aar
-/tmp/new-aar/main-2.2.4-release.aar
+aar/auth_number_product-2.14.25-log-online-standard-cuum-release.aar
+aar/logger-2.2.3-release.aar
+aar/main-2.2.4-release.aar
 ```
 
 ### 步骤 1：新建 GitHub PAT
@@ -112,9 +112,9 @@ GitHub → Settings → Developer settings → Fine-grained tokens → Generate 
 python3 upgrade_kunpo_ali.py \
     --pat <GHPAT> \
     --jitpack-token <JITPACK_TOKEN> \
-    --auth /tmp/new-aar/auth_number_product-2.14.25-log-online-standard-cuum-release.aar \
-    --logger /tmp/new-aar/logger-2.2.3-release.aar \
-    --main /tmp/new-aar/main-2.2.4-release.aar
+    --auth aar/auth_number_product-2.14.25-log-online-standard-cuum-release.aar \
+    --logger aar/logger-2.2.3-release.aar \
+    --main aar/main-2.2.4-release.aar
 ```
 
 脚本输出示意：
